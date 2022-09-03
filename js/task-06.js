@@ -7,7 +7,8 @@ refs.inputEl.addEventListener('blur', eventOnImput);
 function eventOnImput(event) {
   const ev = event.currentTarget;
 
-  return String(ev.value.length) === refs.inputEl.dataset.length
-    ? ev.classList.add('valid')
-    : ev.classList.add('invalid');
+  if (String(ev.value.length) === refs.inputEl.dataset.length) {
+      return  ev.classList.add('valid');
+    }
+  return ev.classList.add('invalid');
 };
