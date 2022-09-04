@@ -15,7 +15,7 @@ function formEvent(event) {
         alert('Пожалуйста, заполните все поля!!!')
     } else {
         formData.forEach((value, name) => {
-            console.log(`${name}:${value}`)
+            console.log(`{${name}:${value}}`)
         });
         event.currentTarget.reset();
     } 
