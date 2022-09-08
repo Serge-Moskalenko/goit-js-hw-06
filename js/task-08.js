@@ -14,9 +14,11 @@ function formEvent(event) {
     if (ev.password.value === '' || ev.email.value === '') {
         alert('Пожалуйста, заполните все поля!!!')
     } else {
+        const FormField = {};
         formData.forEach((value, name) => {
-            console.log(`{${name}:${value}}`)
+            FormField[name] = value;
         });
+        console.log(FormField)
         event.currentTarget.reset();
     } 
 };
